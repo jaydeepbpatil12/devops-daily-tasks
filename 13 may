@@ -1,0 +1,13 @@
+name: My First Workflow: This assigns a display name to the workflow, which will show up in the "Actions" tab of a GitHub repository.
+
+on: push: This defines the event trigger. The pipeline will automatically execute every time new code is pushed to the repository.
+
+jobs:: This section defines the different tasks that make up the workflow. In this case, there is a single job named build.
+
+runs-on: ubuntu-latest: This specifies the environment. It tells GitHub to provision a virtual machine running the latest version of Ubuntu Linux to execute the job.
+
+steps:: This lists the sequential actions performed within the build job.
+
+Checkout code: The first step utilizes a pre-built action (actions/checkout@v3) to pull the repository's code down into the Ubuntu runner environment so it can be tested or built.
+
+Run a script: The second step executes a simple shell command, outputting the text "Hello World" to the runner's console.
